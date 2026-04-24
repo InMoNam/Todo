@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    item_todo.xml
+    RecyclerView 아이템 — 체크박스, 제목, 태그, 마감일, 우선순위 인디케이터
+-->
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -17,21 +21,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="16dp"
-        android:paddingTop="16dp"
         android:paddingEnd="16dp"
-        android:layout_marginEnd="14dp">
+        android:paddingTop="16dp"
+        android:paddingBottom="14dp">
 
+        <!-- ── 우선순위 컬러 바 (좌측) ── -->
         <View
             android:id="@+id/view_priority_bar"
             android:layout_width="4dp"
             android:layout_height="0dp"
             android:background="#6C63FF"
-            android:layout_marginStart="-16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="-16dp"
             tools:background="@color/priority_high"/>
 
+        <!-- ── 체크박스 ── -->
         <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/checkbox_done"
             android:layout_width="28dp"
@@ -42,6 +48,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
+        <!-- ── 메인 콘텐츠 영역 ── -->
         <LinearLayout
             android:id="@+id/layout_content"
             android:layout_width="0dp"
@@ -52,12 +59,13 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/checkbox_done"
             app:layout_constraintEnd_toStartOf="@id/tv_due_date">
-            
+
+            <!-- 할 일 제목 -->
             <TextView
                 android:id="@+id/tv_todo_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="프로젝트 기획안 작성하기"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="@color/text_primary"
@@ -65,44 +73,50 @@
                 android:ellipsize="end"
                 tools:text="디자인 시스템 문서 작성하기"/>
 
+            <!-- 할 일 설명 (선택적) -->
             <TextView
                 android:id="@+id/tv_todo_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
                 android:text="색상, 타이포, 컴포넌트 정리"
                 android:textSize="13sp"
                 android:textColor="@color/text_secondary"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:visibility="visible" />
+                android:layout_marginTop="2dp"
+                android:visibility="visible"/>
 
+            <!-- 태그 + 마감일 가로 배치 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="8dp"
-                android:gravity="center">
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
 
+                <!-- 카테고리 태그 뱃지 -->
                 <TextView
+                    android:id="@+id/tv_category_tag"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
+                    android:text="업무"
                     android:textSize="11sp"
                     android:textStyle="bold"
                     android:textColor="@color/primary"
                     android:paddingHorizontal="10dp"
                     android:paddingVertical="3dp"
-                    android:background=""
+                    android:background="@drawable/bg_tag"
                     tools:text="업무"/>
 
+                <!-- 구분점 -->
                 <View
                     android:layout_width="4dp"
                     android:layout_height="4dp"
                     android:background="@drawable/bg_priority_dot"
                     android:backgroundTint="@color/text_hint"
-                    android:layout_marginHorizontal="8dp" />
+                    android:layout_marginHorizontal="8dp"/>
 
+                <!-- 마감일 텍스트 -->
                 <TextView
                     android:id="@+id/tv_deadline"
                     android:layout_width="wrap_content"
@@ -116,20 +130,22 @@
                     tools:text="오늘 오후 6시"/>
 
             </LinearLayout>
-            
         </LinearLayout>
 
+        <!-- ── 더보기 버튼 ── -->
         <ImageButton
             android:id="@+id/btn_more"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:src=""
+            android:src="@drawable/ic_more_vert"
+            android:contentDescription="더보기"
             app:tint="@color/text_hint"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
+        <!-- ── 마감 D-Day 뱃지 (선택) ── -->
         <TextView
             android:id="@+id/tv_due_date"
             android:layout_width="wrap_content"
@@ -140,12 +156,14 @@
             android:textColor="@color/accent_coral"
             android:paddingHorizontal="8dp"
             android:paddingVertical="3dp"
-            android:background=""
+            android:background="@drawable/bg_dday_badge"
             android:layout_marginEnd="4dp"
-            android:visibility="gone"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_more"
+            android:visibility="gone"
             tools:visibility="visible"
             tools:text="D-2"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </com.google.android.material.card.MaterialCardView>

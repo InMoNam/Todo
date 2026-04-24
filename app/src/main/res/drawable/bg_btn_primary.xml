@@ -21,7 +21,7 @@
 
     <!-- 상단 하이라이트 (입체감) -->
     <item
-        android:bottom="50%">
+        android:bottom="50dp">
         <shape android:shape="rectangle">
             <gradient
                 android:type="linear"
