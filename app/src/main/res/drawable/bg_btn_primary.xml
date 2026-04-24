@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    bg_btn_primary.xml
+    기본 버튼 배경 — 보라→퍼플 그라디언트, 둥근 모서리
+    pressed/disabled 상태는 selector로 감싸서 사용 권장
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 메인 그라디언트 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:startColor="#6C63FF"
+                android:centerColor="#7C6FFF"
+                android:endColor="#9B59B6"
+                android:angle="135"/>
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+
+    <!-- 상단 하이라이트 (입체감) -->
+    <item
+        android:bottom="50%">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:startColor="#1AFFFFFF"
+                android:endColor="#00FFFFFF"
+                android:angle="270"/>
+            <corners
+                android:topLeftRadius="16dp"
+                android:topRightRadius="16dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp"/>
+        </shape>
+    </item>
+
+</layer-list>

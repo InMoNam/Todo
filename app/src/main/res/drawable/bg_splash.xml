@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 베이스 그라디언트 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:startColor="#6C63FF"
+                android:centerColor="#8B5CF6"
+                android:endColor="#FF6584"
+                android:angle="135"/>
+        </shape>
+    </item>
+
+    <!-- 왼쪽 상단 큰 원형 장식 (반투명 흰색) -->
+    <item
+        android:top="-180dp"
+        android:left="-180dp"
+        android:right="60dp"
+        android:bottom="60dp">
+        <shape android:shape="oval">
+            <solid android:color="#1AFFFFFF"/>
+        </shape>
+    </item>
+
+    <!-- 오른쪽 하단 중간 원형 장식 -->
+    <item
+        android:top="55dp"
+        android:left="50dp"
+        android:right="-120dp"
+        android:bottom="-120dp">
+        <shape android:shape="oval">
+            <solid android:color="#14FFFFFF"/>
+        </shape>
+    </item>
+
+    <!-- 오른쪽 상단 작은 원형 장식 -->
+    <item
+        android:top="-40dp"
+        android:left="65dp"
+        android:right="-40dp"
+        android:bottom="70dp">
+        <shape android:shape="oval">
+            <solid android:color="#0DFFFFFF"/>
+        </shape>
+    </item>
+
+    <!-- 하단 페이드 (약간 어둡게 — 텍스트 가독성) -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:startColor="#00000000"
+                android:endColor="#1A000000"
+                android:angle="270"/>
+        </shape>
+    </item>
+
+</layer-list>

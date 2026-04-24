@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ic_deco_circle.xml
+    스플래시 배경 장식용 원형 링 벡터
+    activity_splash.xml 에서 alpha="0.12" 로 사용
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp"
+    android:height="280dp"
+    android:viewportWidth="280"
+    android:viewportHeight="280">
+
+    <!-- 링 형태 (속이 빈 원) -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="48"
+        android:pathData="M140,24 C214.558,24 256,65.442 256,140 C256,214.558 214.558,256 140,256 C65.442,256 24,214.558 24,140 C24,65.442 65.442,24 140,24 Z"/>
+
+</vector>

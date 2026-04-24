@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_splash.xml
+    스플래시 화면 - 그라디언트 배경 + 앱 아이콘 + 로고 + 로딩 인디케이터
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <!-- ── 배경 데코 원형 (상단 왼쪽) ── -->
+    <View
+        android:id="@+id/deco_circle_top"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:background="@drawable/ic_deco_circle"
+        android:alpha="0.12"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="-80dp"
+        android:layout_marginTop="-80dp"/>
+
+    <!-- ── 배경 데코 원형 (하단 오른쪽) ── -->
+    <View
+        android:id="@+id/deco_circle_bottom"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:background="@drawable/ic_deco_circle"
+        android:alpha="0.10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="-60dp"
+        android:layout_marginBottom="-60dp"/>
+
+    <!-- ── 앱 아이콘 컨테이너 ── -->
+    <LinearLayout
+        android:id="@+id/layout_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 아이콘 배경 카드 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="32dp"
+            app:cardElevation="24dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <!-- 체크리스트 아이콘 -->
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_check_circle"
+                app:tint="@color/primary"
+                android:contentDescription="App Icon"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 앱 이름 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doable"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp"
+            android:letterSpacing="-0.02"/>
+
+        <!-- 앱 슬로건 -->
+        <TextView
+            android:id="@+id/tv_tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do more. Stress less."
+            android:textSize="16sp"
+            android:textColor="#CCffffff"
+            android:layout_marginTop="6dp"/>
+
+    </LinearLayout>
+
+    <!-- ── 하단 로딩 영역 ── -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="56dp">
+
+        <!-- 로딩 인디케이터 -->
+        <ProgressBar
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:indeterminateTint="#FFFFFF"
+            android:indeterminateTintMode="src_atop"/>
+
+        <!-- 버전 텍스트 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="v1.0.0"
+            android:textSize="12sp"
+            android:textColor="#80FFFFFF"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

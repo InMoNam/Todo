@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_share"
+        android:title="공유"
+        android:icon="@drawable/ic_share"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_duplicate"
+        android:title="복제하기"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_delete"
+        android:title="삭제하기"
+        app:showAsAction="never"/>
+
+</menu>

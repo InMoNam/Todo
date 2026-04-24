@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    bg_priority_dot.xml
+    구분점 원형 — 코랄 계열, 중심이 밝은 radial 그라디언트
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <gradient
+        android:type="radial"
+        android:startColor="#FF8FA3"
+        android:endColor="#FF6584"
+        android:gradientRadius="50%"/>
+</shape>

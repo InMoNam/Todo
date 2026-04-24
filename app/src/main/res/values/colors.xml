@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <coClor name="black">#FF000000</coClor>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#6C63FF</color>
+    <color name="primary_dark">#4B44CC</color>
+    <color name="primary_light">#EAE9FF</color>
+
+    <color name="accent_coral">#FF6584</color>
+    <color name="accent_mint">#43D9A2</color>
+    <color name="accent_amber">#FFB347</color>
+    <color name="accent_sky">#38BDF8</color>
+
+    <color name="priority_high">#FF4757</color>
+    <color name="priority_medium">#FFA502</color>
+    <color name="priority_low">#2ED573</color>
+
+    <color name="tag_work">#6C63FF</color>
+    <color name="tag_personal">#FF6584</color>
+    <color name="tag_health">#43D9A2</color>
+    <color name="tag_finance">#FFB347</color>
+
+    <color name="background">#F7F8FF</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F0F1FB</color>
+
+    <color name="text_primary">#1A1A2E</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_hint">#A0A8C0</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <color name="divider">#E8EAF6</color>
+    <color name="stroke">#DDE1F5</color>
+
+    <color name="splash_start">#6C63FF</color>
+    <color name="splash_end">#FF6584</color>
+
+    <color name="done_bg">#F3F4F6</color>
+    <color name="done_text">#9CA3AF</color>
+    <color name="done_strike">#9CA3AF</color>
+
+    <color name="shadow">#1A6C63FF</color>
+
+    <color name="status_bar">#6C63FF</color>
+
+</resources>
